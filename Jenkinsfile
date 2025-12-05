@@ -69,7 +69,7 @@ pipeline {
                         """
                         
                         sh """
-                            docker compose -f docker-compose.ecosystem.yml up -d --no-deps --build --force-recreate ${SERVICE_NAME}
+                            docker compose -f docker-compose.ecosystem.yml --profile ondemand up -d --no-deps --build --force-recreate ${SERVICE_NAME}
                         """
                         
                         // Limpieza de imágenes huérfanas y sin usar
